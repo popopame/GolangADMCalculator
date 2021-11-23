@@ -1,0 +1,11 @@
+receivers: 
+  - test@test.fr 
+sender: bot@test.fr
+smtpAddr: smtp.test.fr
+smtpPort: "587"
+
+#The smtp password can be passed via flag or environement variable SMTP_PASSWD
+#smtpPasswd: verysecuredpassword  
+
+#The Yahoo API Key can be passed via flag or environement variable YAHOO_API_KEY
+#apikey: verysecuredpassword  

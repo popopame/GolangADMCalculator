@@ -1,0 +1,15 @@
+<html>
+<body>
+	<h3 id="Highest Momentum-result-august-2021">Highest Momentum Result August 2021</h3>
+	<h4 id="the-winning-asset-for-this-month-is-{{.Ticker}}">The Winning Asset for this month is {{.Ticker}}</h4>
+	<p>This mail is sent automatically each month after the Calculation of the Momentum.</p>
+	<p>Sell all Previous Position and buy <strong>{{.Ticker}}</strong>, if previous month Highest Momentum result were already <strong>{{.Ticker}}</strong> keep your position.</p>
+	<p>As for Assets corresponding to UCITS Regulation:</p>
+	<ul>
+	<li><strong>QQQ</strong>: ZPRR (Russel 2000 UCITS Compliant asset)</li>
+	<li><strong>SPY</strong>: VUAA or ESE (S&amp;P 500 UCITS Compliant asset)</li>
+	<li><strong>TLT</strong>: IS04 Long Term Asset </li>
+	</ul>
+	<p>Here is the complete List of the Ticker and there Computed Momentum : {{.MomentumMap}}</p>
+</body>
+</html>
