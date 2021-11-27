@@ -57,6 +57,7 @@ func main() {
 		fmt.Println(ApiKey)
 	}
 
+	
 	//If the variables were not passed via flag, trying to retrieve them via environement variables
 	if len(smtpPasswd) == 0 {
 		smtpPasswd, set := os.LookupEnv("SMTP_PASSWD")
@@ -75,8 +76,9 @@ func main() {
 	//Populating the Maps of Symbols/Momentum, by calling the GetHistory func to retrieve a Symbols History and Computing Momemtum from it
 	for _, symbol := range SymbolsList {
 		symbolClosingHistory, _ := GetHistory(symbol, "1y", "1mo", ApiKey)
-
+		fmt.Println(symbolClosingHistory)
 		computedMomentum, _ := ComputeMomentum(symbolClosingHistory)
+		fmt.Println(computedMomentum)
 		SymbolsMomentumMap[symbol] = computedMomentum
 	}
 
